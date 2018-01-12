@@ -13,7 +13,7 @@ if (isset($_SESSION['logged']))
     });
 
   $f3->route('GET /exit', function (){
-    $exit = new Exitacc();
+    new Exitacc();
     header('location: /');
   });
 
