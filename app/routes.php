@@ -17,6 +17,10 @@ if (isset($_SESSION['logged']))
     header('location: /');
   });
 
+  $f3->route('GET /update/@action', 'Update->@action');
+  $f3->route('GET|POST /delete/@action', 'Delete->@action');
+  $f3->route('GET|POST /upload/@action', 'Upload->@action');
+
 }
 
 // ДЛЯ НЕ АВТОРИЗОВАННЫХ
@@ -53,9 +57,6 @@ else
   $f3->route('GET|POST /signup/@action', 'Signup->@action');
   $f3->route('GET|POST /confirm/@action', 'Confirm->@action');
   $f3->route('GET|POST /login/@action', 'Login->@action');
-  $f3->route('GET|POST /update/@action', 'Update->@action');
-  $f3->route('GET|POST /delete/@action', 'Delete->@action');
-  $f3->route('GET|POST /upload/@action', 'Upload->@action');
 
 
 }

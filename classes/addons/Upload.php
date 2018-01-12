@@ -6,10 +6,10 @@ class Upload
 {
   public function __construct()
   {
-    $this->file_name = $_FILES['file']['name'];
-    $this->file_size = $_FILES['file']['size'];
-    $this->file_tmp = $_FILES['file']['tmp_name'];
-    $this->file_type = $_FILES['file']['type'];
+    $this->file_name = $_FILES['input-file']['name'];
+    $this->file_size = $_FILES['input-file']['size'];
+    $this->file_tmp = $_FILES['input-file']['tmp_name'];
+    $this->file_type = $_FILES['input-file']['type'];
     $this->user_folder = $_SESSION['logged']['user_folder'];
   }
 
@@ -34,7 +34,7 @@ class Upload
       }
       if (empty($errors))
       {
-        $path_to_file = '/'.$this->user_folder.$this->file_name;
+        $path_to_file = $this->user_folder.$this->file_name;
         move_uploaded_file($this->file_tmp, $path_to_file);
 
         $find_slash_tmp = strpos($this->file_type, '/');

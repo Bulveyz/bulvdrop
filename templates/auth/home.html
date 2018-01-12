@@ -5,14 +5,60 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Signup</title>
+  <title>Bulv Drop</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="libs/materialize.min.css">
   <link rel="stylesheet" href="libs/aos.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="home-page">
+<div id="layer_fixed" class="navbar-fixed d-none">
+  <div id="layer">
+    <div class="slup d-flex justify-content-center align-items-center">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
 
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- HEADER -->
 <header class="header">
 
@@ -67,16 +113,13 @@
     <h4>Загрузить файл</h4>
     <p class="flow-text">Выберите и загрузите ваш файл</p>
     <form id="form-upload" action="" method="POST">
-      <div class="file-field input-field">
-        <div class="btn">
-          <span>Загрузить</span>
-          <input type="file" name="input-file" required>
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
-        </div>
-      </div>
+      <label class="btn" id="file_inps" for="file_inp">ВЫбрать файл</label>
+      <input class="d-none" id="file_inp" type="file" name="input-file" required>
     </form>
+    <div class="progress d-none">
+      <div class="determinate"></div>
+    </div>
+
   </div>
   <div class="modal-footer">
     <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Отмена</a>
@@ -113,16 +156,7 @@
       <th>Действие</th>
     </tr>
     </thead>
-
-    <tbody>
-      <tr>
-        <td>Index.php</td>
-        <td>4MB</td>
-        <td>
-          <button class="btn waves-effect"><i class="material-icons">file_download</i></button>
-          <button class="btn waves-effect red"><i class="material-icons">delete</i></button>
-        </td>
-      </tr>
+    <tbody id="files">
     </tbody>
   </table>
 </div>
@@ -130,8 +164,8 @@
 
 
 <script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.form.min.js"></script>
 <script src="libs/materialize.min.js"></script>
-<script src="libs/aos.js"></script>
 <script src="js/home.js"></script>
 <script src="js/main.js"></script>
 </body>

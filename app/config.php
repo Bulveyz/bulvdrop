@@ -11,6 +11,9 @@ date_default_timezone_set($time_zone);
 $db = new Db('localhost', 'bulvdrop2', 'root', 'crfn131354');
 $db->connectDb();
 
+$root = new RootCheck($_GET['path'], $_SESSION['logged']['user_folder'], $_GET['file']);
+$root->downloadRoot();
+
 
 
 
