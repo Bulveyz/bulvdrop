@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home Page</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="libs/materialize.min.css">
+  <link rel="stylesheet" href="libs/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+
+<!-- HEADER DROP DOWN -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/login">Войти</a></li>
+  <li><a href="/signup">Регистрация</a></li>
+  <li class="divider"></li>
+  <li><a href="/support">Помощь</a></li>
+</ul>
+<!-- /HEADER DROP DOWN -->
+
+<!-- HEADER NAVIGATION -->
+  <ul id="slide-out" class="side-nav">
+  <li class="center">
+    <img class="responsive-img" src="images/logo.svg" alt="logo">
+  </li>
+  <li class="active">
+    <a href="/">Главная</a>
+  </li>
+  <li>
+    <a class="dropdown-button" href="#" data-activates="dropdown1">Аккаунт<i class="material-icons right">arrow_drop_down</i></a>
+  </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse show-on-large side-nav__fixed-top">
+    <div class="header__toggle">
+      <div class="toggle-line"></div>
+    </div>
+  </a>
+<!-- /HEADER NAVIGATION -->
+
+</header>
+<!-- END HEADER -->
+
+<!-- CONTENT -->
+<main>
+
+<!-- PROMO -->
+<div class="promo d-flex align-items-center">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 hide-on-med-and-down">
+      <img class="responsive-img" src="images/telephon.svg" alt="telephone" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+    </div>
+    <div class="col-md-6 align-self-center text-md-center">
+      <h1 class="promo__title white-text">Облачное хранилище</h1>
+      <p class="flow-text white-text">Облочное хранилище на неограниченное дисковое пространство! Первый год бесплатно, регистрируйся</p>
+      <a class="waves-effect waves-light btn" href="/login">Вход</a>
+      <a class="waves-effect waves-light btn" href="/signup">Регистрация</a>
+    </div>
+  </div>
+</div>
+</div>
+<!-- END PROMO -->
+
+<!-- ABOUT US -->
+<div class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center text-md-center" data-aos="fade-right">
+        <h2 class="about__title">Работа без перебоев</h2>
+        <p class="flow-text">Все ваши файлы, документы, архивы, медиа, буду у вас под рукой 24/7 </p>
+      </div>
+      <div class="col-md-6 text-md-center">
+        <img class="responsive-img" src="images/image1.svg" alt="">
+      </div>
+      <div class="w100"></div>
+      <div class="col-md-6 text-md-center order-1">
+        <img class="responsive-img" src="images/image2.svg" alt="">
+      </div>
+      <div class="col-md-6 align-self-center text-md-center order-md-2" data-aos="fade-left">
+        <h2 class="about__title">Конфиденциальность</h2>
+        <p class="flow-text">Все ваши данные находятся под строгой охранной, никто не узнает ваших секретов ;)</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END ABOUT US -->
+
+<!-- FOOTER PROMO -->
+<div class="footer-promo white-text">
+  <div class="row no-gutters">
+    <div class="col-md-6 align-self-center center" data-aos="fade-right">
+      <h2 class="footer-promo__title">Non limited</h2>
+      <p class="flow-text">Сохранаяйте сколько угодно и что угодно, без ограничение на дисковое пространноство !</p>
+      <a class="waves-effect waves-light btn" href="/signup">Начать</a>
+    </div>
+    <div class="col-md-6">
+      <img class="responsive-img" src="images/image3.svg" alt="" data-aos="fade-up-left">
+    </div>
+  </div>
+</div>
+<!-- END FOOTER PROMO -->
+
+<!-- COPYRIGHT -->
+ <footer class="footer">
+ <p class="footer__copyright center">© BulvDrop, 2017</p>
+ </footer>
+<!-- END COPYRIGHT -->
+
+</main>
+<!-- END CONTENT -->
+
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/materialize.min.js"></script>
+<script src="libs/aos.js"></script>
+<script src="js/index.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
