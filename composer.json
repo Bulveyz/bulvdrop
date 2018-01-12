@@ -1,0 +1,14 @@
+{
+    "name": "rus/rus",
+    "authors": [
+        {
+            "name": "Bulveyz",
+            "email": "rus131354@icloud.com"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree-core": "^3.6",
+        "gabordemooij/redbean": "^5.0",
+        "twig/twig": "~2.0"
+    }
+}

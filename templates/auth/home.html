@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Signup</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="libs/materialize.min.css">
+  <link rel="stylesheet" href="libs/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="home-page">
+
+<!-- HEADER -->
+<header class="header">
+
+  <!-- HEADER DROP DOWN -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/settings">Настройки</a></li>
+    <li><a href="/exit">Выйти</a></li>
+    <li class="divider"></li>
+    <li><a href="/support">Помощь</a></li>
+  </ul>
+  <!-- /HEADER DROP DOWN -->
+
+  <!-- HEADER NAVIGATION -->
+  <ul id="slide-out" class="side-nav">
+    <li class="center">
+      <img class="responsive-img" src="images/logo.svg" alt="logo">
+    </li>
+    <li class="active">
+      <a href="/">Главная</a>
+    </li>
+    <li>
+      <a class="dropdown-button" href="#" data-activates="dropdown1">{{login}}<i class="material-icons right">arrow_drop_down</i></a>
+    </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse show-on-large side-nav__fixed-top">
+    <div class="header__toggle">
+      <div class="toggle-line"></div>
+    </div>
+  </a>
+  <!-- /HEADER NAVIGATION -->
+
+</header>
+<!-- END HEADER -->
+
+<main>
+<div class="panel container">
+  <h3>Ваши файлы</h3>
+  <div class="fixed-action-btn toolbar">
+    <a class="btn-floating btn-large btn-menu">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li class="waves-effect waves-light"><a class="modal-trigger" href="#modal-upload"><i class="material-icons">create_new_folder</i></a></li>
+      <li class="waves-effect waves-light"><a class="modal-trigger" href="#modal-new-file"><i class="material-icons">insert_drive_file</i></a></li>
+      <li class="waves-effect waves-light"><a class="modal-trigger" href="#modal-upload"><i class="material-icons">publish</i></a></li>
+    </ul>
+  </div>
+
+<!-- Modal Upload -->
+<div id="modal-upload" class="modal bottom-sheet">
+  <div class="modal-content container">
+    <h4>Загрузить файл</h4>
+    <p class="flow-text">Выберите и загрузите ваш файл</p>
+    <form id="form-upload" action="" method="POST">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Загрузить</span>
+          <input type="file" name="input-file" required>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Отмена</a>
+  </div>
+</div>
+<!-- End Modal Upload -->
+
+<!-- Modal New File -->
+<div id="modal-new-file" class="modal bottom-sheet">
+  <div class="modal-content container">
+    <h4>Создать файл</h4>
+    <p class="flow-text">Ввдите название нового файла</p>
+    <form id="form-new-file" action="" method="POST">
+      <div class="input-field new-file">
+        <input id="new-file-label" type="text" name="input-new-file" required>
+        <label for="new-file-label">Имя файла</label>
+        <button class="btn" type="submit" name="new-file">Создать</button>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Отмена</a>
+  </div>
+</div>
+<!-- End Modal New File -->
+</div>
+
+<div class="files">
+  <table class="striped">
+    <thead>
+    <tr>
+      <th>Имя файла</th>
+      <th>Размер</th>
+      <th>Действие</th>
+    </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Index.php</td>
+        <td>4MB</td>
+        <td>
+          <button class="btn waves-effect"><i class="material-icons">file_download</i></button>
+          <button class="btn waves-effect red"><i class="material-icons">delete</i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</main>
+
+
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/materialize.min.js"></script>
+<script src="libs/aos.js"></script>
+<script src="js/home.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
